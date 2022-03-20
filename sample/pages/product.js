@@ -9,7 +9,7 @@ const Product = () => {
 
     return (
       <div className="four wide column" key={id}>
-        <Link href={`/product/${id}`}>
+        <Link href={`/${id}`}>
           <div className="ui link cards">
             <div className="card">
               <div className="image">
