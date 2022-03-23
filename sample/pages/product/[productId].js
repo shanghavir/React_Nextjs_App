@@ -1,14 +1,19 @@
 import React, { useEffect } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
+import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
 import {
   selectedProduct,
   removeSelectedProduct,
-} from "../redux/actions/productAction";
+} from "../../redux/actions/productaction";
 
 const ProductDetails = () => {
-  const { productId } = useParams();
+  // const { productId } = useParams();
+
+  const router = useRouter();
+  const { productId } = router.query
+
   let product = useSelector((state) => state.product);
   const { image, title, price, category, description } = product;
   const dispatch = useDispatch();
@@ -27,6 +32,7 @@ const ProductDetails = () => {
       dispatch(removeSelectedProduct());
     };
   }, [productId]);
+  
   return (
     <div className="ui grid container">
       {Object.keys(product).length === 0 ? (

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-import { setProducts } from "../redux/actions/productAction";
+import { setProducts } from "../redux/actions/productaction";
 import Product from "./product";
 
 const ProductList = () => {
@@ -23,7 +23,9 @@ const ProductList = () => {
 
   console.log("products: ", products);
   return (
+    
     <div className="ui grid container">
+    
       <Product />
     </div>
   );
