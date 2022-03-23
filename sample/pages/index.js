@@ -23,7 +23,9 @@ const ProductList = () => {
 
   console.log("products: ", products);
   return (
+    
     <div className="ui grid container">
+    
       <Product />
     </div>
   );

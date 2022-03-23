@@ -9,7 +9,7 @@ const Product = () => {
 
     return (
       <div className="four wide column" key={id}>
-        <Link href={`/${id}`}>
+        <Link href={`/product/${id}`}>
           <div className="ui link cards">
             <div className="card">
               <div className="image">
@@ -20,6 +20,7 @@ const Product = () => {
                 <div className="meta price">$ {price}</div>
                 <div className="meta">{category}</div>
               </div>
+
             </div>
           </div>
         </Link>
